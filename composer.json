@@ -1,24 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "tringuyenduc2903/viettelpost-laravel",
+    "description": "ViettelPost (VTP) SDK for Laravel Framework",
     "keywords": [
-        ":vendor_name",
+        "Nguyễn Đức Trí",
         "laravel",
-        ":package_slug"
+        "viettel post",
+        "viettelpost",
+        "vtp",
+        "viettelpost-laravel"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/tringuyenduc2903/viettelpost-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Nguyễn Đức Trí",
+            "email": "nguyenductri2k3@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.4",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "guzzlehttp/guzzle": "^7.9",
+        "illuminate/contracts": "^10.0||^11.0",
+        "php": "^8.2",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -35,14 +39,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "TriNguyenDuc\\ViettelPost\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "TriNguyenDuc\\ViettelPost\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -63,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "TriNguyenDuc\\ViettelPost\\ViettelPostServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "ViettelPost": "TriNguyenDuc\\ViettelPost\\Facades\\ViettelPost"
             }
         }
     },
