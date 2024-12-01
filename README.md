@@ -22,10 +22,42 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'api_url' => env('VTP_API_URL', 'https://partner.viettelpost.vn'),
+
+    'partner' => [
+        'user_name' => env('VTP_PARTNER_USERNAME'),
+        'password' => env('VTP_PARTNER_PASSWORD'),
+    ],
+
+    'token' => env('VTP_TOKEN'),
 ];
 ```
 
 ## Usage
+
+### #1 [Sign in by partner account](https://partner.viettelpost.vn/?uId=login)
+
+**Syntax**
+
+```php
+\ViettelPost::signInByPartnerAccount();
+```
+
+**Result**
+
+```php
+array:9 [
+  "userId" => 13840789
+  "token" => "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiIwOTgyMjEzODU0IiwiVXNlcklkIjoxMzg0MDc4OSwiRnJvbVNvdXJjZSI6NSwiVG9rZW4iOiJTSEk5QUFXM0c3VkxQNldWN0YiLCJleHAiOjE3MzMxNTUyMDksIlBhcnRuZXIiOjEzODQwNzg5fQ.mssFkIWgeZ1VE4mQrnrDTZpafgvLlAp73AqW_KftOotS4ntVqTNcV5Q_-gc1ZiPq-E96oiumUMF70vJ5MD2SVQ"
+  "partner" => 13840789
+  "phone" => "0982213854"
+  "postcode" => null
+  "expired" => 1733155209335
+  "encrypted" => null
+  "source" => 5
+  "infoUpdated" => true
+]
+```
 
 ## Changelog
 
