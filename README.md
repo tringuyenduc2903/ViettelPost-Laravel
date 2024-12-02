@@ -59,6 +59,48 @@ array:9 [
 ]
 ```
 
+### #2 [Register customer accounts](https://partner.viettelpost.vn/?uId=login)
+
+**Syntax**
+
+```php
+\ViettelPost::registerCustomerAccounts([
+    'EMAIL' => $email,
+    'PHONE' => $phone,
+    'NAME' => $name,
+    'ADDRESS' => $address,
+    'WARDS_ID' => $wards_id,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::registerCustomerAccounts([
+    'EMAIL' => 'luan.ictu.2014@gmail.com',
+    'PHONE' => '0968666888',
+    'NAME' => 'Luân Test 2',
+    'ADDRESS' => '61 K2 Cầu Diễn',
+    'WARDS_ID' => 493,
+]);
+```
+
+**Result**
+
+```php
+array:9 [
+  "userId" => 15421466
+  "token" => "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiIwODIzMTUzNjU2IiwiVXNlcklkIjoxNTQyMTQ2NiwiRnJvbVNvdXJjZSI6NSwiVG9rZW4iOiJaRzU3VVlRSjY4RiIsImV4cCI6MTgxOTU1MzI4MSwiUGFydG5lciI6MTM4NDA3ODl9.n0e6Uw7ZnvfmhbCEQmdrNbK9tTJElzA2BBG5zYLNqB8-686mWc1oukZbBAFoh2vziyutxleJ_2glF4Ow8_E3Wg"
+  "partner" => 13840789
+  "phone" => "0968666888"
+  "postcode" => null
+  "expired" => 1819553281019
+  "encrypted" => null
+  "source" => 5
+  "infoUpdated" => true
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

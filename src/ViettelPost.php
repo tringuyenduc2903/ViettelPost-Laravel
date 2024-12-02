@@ -19,7 +19,7 @@ class ViettelPost
     ): PendingRequest {
         return Http::baseUrl($api_url ?: config('viettelpost-laravel.api_url'))
             ->withHeaders([
-                'Token' => $token ?: config('giaohangnhanh-laravel.token'),
+                'Token' => $token ?: config('viettelpost-laravel.token'),
             ])
             ->accept('application/json');
     }
