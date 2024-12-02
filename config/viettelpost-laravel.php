@@ -8,5 +8,10 @@ return [
         'password' => env('VTP_PARTNER_PASSWORD'),
     ],
 
+    'customer' => [
+        'user_name' => env('VTP_CUSTOMER_USERNAME'),
+        'password' => env('VTP_CUSTOMER_PASSWORD'),
+    ],
+
     'token' => env('VTP_TOKEN'),
 ];

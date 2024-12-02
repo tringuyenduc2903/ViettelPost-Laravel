@@ -29,6 +29,11 @@ return [
         'password' => env('VTP_PARTNER_PASSWORD'),
     ],
 
+    'customer' => [
+        'user_name' => env('VTP_CUSTOMER_USERNAME'),
+        'password' => env('VTP_CUSTOMER_PASSWORD'),
+    ],
+
     'token' => env('VTP_TOKEN'),
 ];
 ```
@@ -95,6 +100,30 @@ array:9 [
   "phone" => "0968666888"
   "postcode" => null
   "expired" => 1819553281019
+  "encrypted" => null
+  "source" => 5
+  "infoUpdated" => true
+]
+```
+
+### #3 [Sign in by customer account](https://partner.viettelpost.vn/?uId=login)
+
+**Syntax**
+
+```php
+\ViettelPost::signInByCustomerAccount();
+```
+
+**Result**
+
+```php
+array:9 [
+  "userId" => 13840789
+  "token" => "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiIwOTgyMjEzODU0IiwiVXNlcklkIjoxMzg0MDc4OSwiRnJvbVNvdXJjZSI6NSwiVG9rZW4iOiJTSEk5QUFXM0c3VkxQNldWN0YiLCJleHAiOjE4MTk1NTU3NzgsIlBhcnRuZXIiOjEzODQwNzg5fQ._hCVqWmMaAN0y4kGhsFZSHJqCbPqp8LuoVRh4qW3UIPk7F2HT9swiPEMd3NjGT3Odu63WIxJXShiq0zYUP9P_g"
+  "partner" => 13840789
+  "phone" => "0982213854"
+  "postcode" => null
+  "expired" => 1819555778518
   "encrypted" => null
   "source" => 5
   "infoUpdated" => true

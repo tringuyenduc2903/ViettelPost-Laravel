@@ -44,4 +44,24 @@ trait Token
 
         return $response->json('data');
     }
+
+    /**
+     * @throws ConnectionException
+     * @throws Exception
+     */
+    public function signInByCustomerAccount(
+        ?string $api_url = null,
+        ?string $token = null
+    ): array {
+        $response = $this
+            ->getRequest($api_url, $token)
+            ->post('v2/user/ownerConnect', [
+                'USERNAME' => config('viettelpost-laravel.customer.user_name'),
+                'PASSWORD' => config('viettelpost-laravel.customer.password'),
+            ]);
+
+        $this->handleFailedResponse($response);
+
+        return $response->json('data');
+    }
 }

@@ -15,3 +15,7 @@ test('registerCustomerAccounts must be array', function () {
         'WARDS_ID' => 471,
     ]))->toBeArray()->dump();
 });
+
+test('signInByCustomerAccount must be array', function () {
+    expect(ViettelPost::signInByCustomerAccount())->toBeArray()->dump();
+});
