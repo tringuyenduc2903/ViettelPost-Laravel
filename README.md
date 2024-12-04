@@ -130,6 +130,32 @@ array:9 [
 ]
 ```
 
+### #4 [Get list of province or city codes](https://partner.viettelpost.vn/?uId=danh-muc-dia-danh)
+
+**Syntax**
+
+```php
+\ViettelPost::getListProvince($province_id);
+```
+
+**Example**
+
+```php
+\ViettelPost::getListProvince(22);
+```
+
+**Result**
+
+```php
+array:1 [
+  0 => array:3 [
+    "PROVINCE_ID" => 22
+    "PROVINCE_CODE" => "LSN"
+    "PROVINCE_NAME" => "Lạng Sơn"
+  ]
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
