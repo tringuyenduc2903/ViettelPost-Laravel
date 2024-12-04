@@ -135,13 +135,13 @@ array:9 [
 **Syntax**
 
 ```php
-\ViettelPost::getListProvince($province_id);
+\ViettelPost::getListProvinceCodes($province_id);
 ```
 
 **Example**
 
 ```php
-\ViettelPost::getListProvince(22);
+\ViettelPost::getListProvinceCodes(22);
 ```
 
 **Result**
@@ -152,6 +152,93 @@ array:1 [
     "PROVINCE_ID" => 22
     "PROVINCE_CODE" => "LSN"
     "PROVINCE_NAME" => "Lạng Sơn"
+  ]
+]
+```
+
+### #5 [Get list of district codes](https://partner.viettelpost.vn/?uId=danh-muc-dia-danh)
+
+**Syntax**
+
+```php
+\ViettelPost::getListDistrictCodes($province_id);
+```
+
+**Example**
+
+```php
+\ViettelPost::getListDistrictCodes(22);
+```
+
+**Result**
+
+```php
+array:11 [
+  0 => array:4 [
+    "DISTRICT_ID" => 231
+    "DISTRICT_VALUE" => "2439"
+    "DISTRICT_NAME" => "HUYỆN VĂN QUAN"
+    "PROVINCE_ID" => 22
+  ]
+  1 => array:4 [
+    "DISTRICT_ID" => 232
+    "DISTRICT_VALUE" => "2461"
+    "DISTRICT_NAME" => "HUYỆN HỮU LŨNG"
+    "PROVINCE_ID" => 22
+  ]
+  2 => array:4 [
+    "DISTRICT_ID" => 233
+    "DISTRICT_VALUE" => "2456"
+    "DISTRICT_NAME" => "HUYỆN CHI LĂNG"
+    "PROVINCE_ID" => 22
+  ]
+  3 => array:4 [
+    "DISTRICT_ID" => 234
+    "DISTRICT_VALUE" => "2450"
+    "DISTRICT_NAME" => "HUYỆN BẮC SƠN"
+    "PROVINCE_ID" => 22
+  ]
+  4 => array:4 [
+    "DISTRICT_ID" => 235
+    "DISTRICT_VALUE" => "2425"
+    "DISTRICT_NAME" => "HUYỆN VĂN LÃNG"
+    "PROVINCE_ID" => 22
+  ]
+  5 => array:4 [
+    "DISTRICT_ID" => 236
+    "DISTRICT_VALUE" => "2468"
+    "DISTRICT_NAME" => "HUYỆN LỘC BÌNH"
+    "PROVINCE_ID" => 22
+  ]
+  6 => array:4 [
+    "DISTRICT_ID" => 237
+    "DISTRICT_VALUE" => "2418"
+    "DISTRICT_NAME" => "HUYỆN CAO LỘC"
+    "PROVINCE_ID" => 22
+  ]
+  7 => array:4 [
+    "DISTRICT_ID" => 238
+    "DISTRICT_VALUE" => "2475"
+    "DISTRICT_NAME" => "HUYỆN ĐÌNH LẬP"
+    "PROVINCE_ID" => 22
+  ]
+  8 => array:4 [
+    "DISTRICT_ID" => 239
+    "DISTRICT_VALUE" => "2445"
+    "DISTRICT_NAME" => "HUYỆN BÌNH GIA"
+    "PROVINCE_ID" => 22
+  ]
+  9 => array:4 [
+    "DISTRICT_ID" => 240
+    "DISTRICT_VALUE" => "2410"
+    "DISTRICT_NAME" => "THÀNH PHỐ LẠNG SƠN"
+    "PROVINCE_ID" => 22
+  ]
+  10 => array:4 [
+    "DISTRICT_ID" => 241
+    "DISTRICT_VALUE" => "2431"
+    "DISTRICT_NAME" => "HUYỆN TRÀNG ĐỊNH"
+    "PROVINCE_ID" => 22
   ]
 ]
 ```
