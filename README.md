@@ -180,66 +180,34 @@ array:11 [
     "DISTRICT_NAME" => "HUYỆN VĂN QUAN"
     "PROVINCE_ID" => 22
   ]
-  1 => array:4 [
-    "DISTRICT_ID" => 232
-    "DISTRICT_VALUE" => "2461"
-    "DISTRICT_NAME" => "HUYỆN HỮU LŨNG"
-    "PROVINCE_ID" => 22
+  ...
+]
+```
+
+### #6 [Get list of ward codes](https://partner.viettelpost.vn/?uId=danh-muc-dia-danh)
+
+**Syntax**
+
+```php
+\ViettelPost::getListWardCodes($district_id);
+```
+
+**Example**
+
+```php
+\ViettelPost::getListWardCodes(127);
+```
+
+**Result**
+
+```php
+array:14 [
+  0 => array:3 [
+    "WARDS_ID" => 1813
+    "WARDS_NAME" => "XÃ QUẢNG PHÚ"
+    "DISTRICT_ID" => 127
   ]
-  2 => array:4 [
-    "DISTRICT_ID" => 233
-    "DISTRICT_VALUE" => "2456"
-    "DISTRICT_NAME" => "HUYỆN CHI LĂNG"
-    "PROVINCE_ID" => 22
-  ]
-  3 => array:4 [
-    "DISTRICT_ID" => 234
-    "DISTRICT_VALUE" => "2450"
-    "DISTRICT_NAME" => "HUYỆN BẮC SƠN"
-    "PROVINCE_ID" => 22
-  ]
-  4 => array:4 [
-    "DISTRICT_ID" => 235
-    "DISTRICT_VALUE" => "2425"
-    "DISTRICT_NAME" => "HUYỆN VĂN LÃNG"
-    "PROVINCE_ID" => 22
-  ]
-  5 => array:4 [
-    "DISTRICT_ID" => 236
-    "DISTRICT_VALUE" => "2468"
-    "DISTRICT_NAME" => "HUYỆN LỘC BÌNH"
-    "PROVINCE_ID" => 22
-  ]
-  6 => array:4 [
-    "DISTRICT_ID" => 237
-    "DISTRICT_VALUE" => "2418"
-    "DISTRICT_NAME" => "HUYỆN CAO LỘC"
-    "PROVINCE_ID" => 22
-  ]
-  7 => array:4 [
-    "DISTRICT_ID" => 238
-    "DISTRICT_VALUE" => "2475"
-    "DISTRICT_NAME" => "HUYỆN ĐÌNH LẬP"
-    "PROVINCE_ID" => 22
-  ]
-  8 => array:4 [
-    "DISTRICT_ID" => 239
-    "DISTRICT_VALUE" => "2445"
-    "DISTRICT_NAME" => "HUYỆN BÌNH GIA"
-    "PROVINCE_ID" => 22
-  ]
-  9 => array:4 [
-    "DISTRICT_ID" => 240
-    "DISTRICT_VALUE" => "2410"
-    "DISTRICT_NAME" => "THÀNH PHỐ LẠNG SƠN"
-    "PROVINCE_ID" => 22
-  ]
-  10 => array:4 [
-    "DISTRICT_ID" => 241
-    "DISTRICT_VALUE" => "2431"
-    "DISTRICT_NAME" => "HUYỆN TRÀNG ĐỊNH"
-    "PROVINCE_ID" => 22
-  ]
+  ...
 ]
 ```
 
