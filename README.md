@@ -240,6 +240,27 @@ array:3705 [
 ]
 ```
 
+### #8 [Get list service](https://partner.viettelpost.vn/?uId=danh-muc-buu-cuc-va-dich-vu)
+
+**Syntax**
+
+```php
+\ViettelPost::getListService();
+```
+
+**Result**
+
+```php
+array:36 [
+  0 => array:3 [
+    "SERVICE_CODE" => "V510"
+    "SERVICE_NAME" => "Dịch vụ 5+ gói 1000g"
+    "DESCRIPTION" => null
+  ]
+  ...
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
