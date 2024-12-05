@@ -261,6 +261,33 @@ array:36 [
 ]
 ```
 
+### #9 [Get list service extend](https://partner.viettelpost.vn/?uId=danh-muc-buu-cuc-va-dich-vu)
+
+**Syntax**
+
+```php
+\ViettelPost::getListServiceExtend($service_code);
+```
+
+**Example**
+
+```php
+\ViettelPost::getListServiceExtend('QTK');
+```
+
+**Result**
+
+```php
+array:18 [
+  0 => array:3 [
+    "SERVICE_CODE" => "CALE"
+    "SERVICE_NAME" => "08/03"
+    "DESCRIPTION" => null
+  ]
+  ...
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

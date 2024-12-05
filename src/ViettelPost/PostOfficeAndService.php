@@ -42,4 +42,24 @@ trait PostOfficeAndService
 
         return $response->json('data');
     }
+
+    /**
+     * @throws ConnectionException
+     * @throws Exception
+     */
+    public function getListServiceExtend(
+        string $service_code,
+        ?string $api_url = null,
+        ?string $token = null
+    ): array {
+        $response = $this
+            ->getRequest($api_url, $token)
+            ->get('v2/categories/listServiceExtra', [
+                'serviceCode' => $service_code,
+            ]);
+
+        $this->handleFailedResponse($response);
+
+        return $response->json('data');
+    }
 }

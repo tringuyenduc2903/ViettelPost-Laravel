@@ -9,3 +9,7 @@ test('getListPostOffice must be array', function () {
 test('getListService must be array', function () {
     expect(ViettelPost::getListService())->toBeArray()->dump();
 });
+
+test('getListServiceExtend must be array', function (string $service_code) {
+    expect(ViettelPost::getListServiceExtend($service_code))->toBeArray()->dump();
+})->with('service code');
