@@ -8,11 +8,13 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\ViettelPost\ViettelPost\AdministrativeUnit;
+use TriNguyenDuc\ViettelPost\ViettelPost\PostOfficeAndService;
 use TriNguyenDuc\ViettelPost\ViettelPost\Token;
 
 class ViettelPost
 {
     use AdministrativeUnit;
+    use PostOfficeAndService;
     use Token;
 
     protected function getRequest(

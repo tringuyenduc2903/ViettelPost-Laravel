@@ -211,6 +211,35 @@ array:14 [
 ]
 ```
 
+### #7 [Get list post office](https://partner.viettelpost.vn/?uId=danh-muc-buu-cuc-va-dich-vu)
+
+**Syntax**
+
+```php
+\ViettelPost::getListPostOffice();
+```
+
+**Result**
+
+```php
+array:3705 [
+  0 => array:11 [
+    "TEN_TINH" => "Hà Nội"
+    "TEN_QUANHUYEN" => "QUẬN HOÀNG MAI"
+    "TEN_PHUONGXA" => "PHƯỜNG GIÁP BÁT"
+    "MA_BUUCUC" => "GPG"
+    "TEN_BUUCUC" => "Giải Phóng"
+    "DIA_CHI" => "837 giải phóng, giáp bát, hoàng mai, hn"
+    "LATITUDE" => "20.962681969735417"
+    "LONGITUDE" => "105.83058721657046"
+    "DIEN_THOAI" => null
+    "PHUTRACH" => null
+    "PHUTRACHPHONE" => null
+  ]
+  ...
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
