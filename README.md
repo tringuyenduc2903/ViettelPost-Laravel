@@ -315,6 +315,61 @@ array:1 [
 ]
 ```
 
+### #11 [Create a new store](https://partner.viettelpost.vn/?uId=dia-chi-lay-hang)
+
+**Syntax**
+
+```php
+\ViettelPost::createNewStore([
+    'PHONE' => $phone,
+    'NAME' => $name,
+    'ADDRESS' => $address,
+    'WARDS_ID' => $wards_id,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::createNewStore([
+    'PHONE' => '0968625207',
+    'NAME' => 'Luân Test 2',
+    'ADDRESS' => '61 K2 Cầu Diễn',
+    'WARDS_ID' => 493,
+]);
+```
+
+**Result**
+
+```php
+array:2 [
+  0 => array:10 [
+    "groupaddressId" => 21129764
+    "cusId" => 13840789
+    "name" => "Luân Test 2"
+    "phone" => "0968625207"
+    "address" => "61 K2 Cầu Diễn"
+    "provinceId" => 1
+    "districtId" => 25
+    "wardsId" => 493
+    "postId" => null
+    "merchant" => null
+  ]
+  1 => array:10 [
+    "groupaddressId" => 16700883
+    "cusId" => 13840789
+    "name" => "Nguyễn Đức Trí"
+    "phone" => "0982213854"
+    "address" => "Số 138 Phố Dương Văn Bé, P.Vĩnh Tuy, Q.Hai Bà Trưng, TP.Hà Nội"
+    "provinceId" => 1
+    "districtId" => 9
+    "wardsId" => 208
+    "postId" => null
+    "merchant" => null
+  ]
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

@@ -23,4 +23,22 @@ trait StoreAddress
 
         return $response->json('data');
     }
+
+    /**
+     * @throws ConnectionException
+     * @throws Exception
+     */
+    public function createNewStore(
+        array $data,
+        ?string $api_url = null,
+        ?string $token = null
+    ): array {
+        $response = $this
+            ->getRequest($api_url, $token)
+            ->post('v2/user/registerInventory', $data);
+
+        $this->handleFailedResponse($response);
+
+        return $response->json('data');
+    }
 }
