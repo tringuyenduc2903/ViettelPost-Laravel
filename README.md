@@ -370,6 +370,351 @@ array:2 [
 ]
 ```
 
+### #12 [Get link print](https://partner.viettelpost.vn/?uId=mo-rong)
+
+**Syntax**
+
+```php
+\ViettelPost::createBill([
+    'TYPE' => $type,
+    'ORDER_ARRAY' => $orders,
+    'EXPIRY_TIME' => $expiry_time,
+    'PRINT_TOKEN' => $print_token,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::createBill([
+    'TYPE' => 1,
+    'ORDER_ARRAY' => [
+        'ORDER_1',
+        'ORDER_2',
+    ],
+    'EXPIRY_TIME' => 1583639063000,
+    'PRINT_TOKEN' => 'Token in do Viettelpost Cấp',
+]);
+```
+
+**Result**
+
+```php
+```
+
+### #13 [Create bill](https://partner.viettelpost.vn/?uId=cuoc-va-van-don)
+
+**Syntax**
+
+```php
+\ViettelPost::createBill([
+    'ORDER_NUMBER' => $order_number,
+    'GROUPADDRESS_ID' => $group_address_id,
+    'CUS_ID' => $customer_id,
+    'DELIVERY_DATE' => $delivery_date,
+    'SENDER_FULLNAME' => $sender_fullname,
+    'SENDER_ADDRESS' => $sender_address,
+    'SENDER_PHONE' => $sender_phone,
+    'SENDER_EMAIL' => $sender_email,
+    'SENDER_WARD' => $sender_ward,
+    'SENDER_DISTRICT' => $sender_district,
+    'SENDER_PROVINCE' => $sender_province,
+    'SENDER_LATITUDE' => $sender_latitude,
+    'SENDER_LONGITUDE' => $sender_longitude,
+    'RECEIVER_FULLNAME' => $receiver_fullname,
+    'RECEIVER_ADDRESS' => $receiver_address,
+    'RECEIVER_PHONE' => $receiver_phone,
+    'RECEIVER_EMAIL' => $receiver_email,
+    'RECEIVER_WARD' => $receiver_ward,
+    'RECEIVER_DISTRICT' => $receiver_district,
+    'RECEIVER_PROVINCE' => $receiver_province,
+    'RECEIVER_LATITUDE' => $receiver_latitude,
+    'RECEIVER_LONGITUDE' => $receiver_longitude,
+    'PRODUCT_NAME' => $product_name,
+    'PRODUCT_DESCRIPTION' => $product_description,
+    'PRODUCT_QUANTITY' => $product_quantity,
+    'PRODUCT_PRICE' => $product_price,
+    'PRODUCT_WEIGHT' => $product_weight,
+    'PRODUCT_LENGTH' => $product_length,
+    'PRODUCT_WIDTH' => $product_width,
+    'PRODUCT_HEIGHT' => $product_height,
+    'PRODUCT_TYPE' => $product_type,
+    'ORDER_PAYMENT' => $order_payment,
+    'ORDER_SERVICE' => $order_service,
+    'ORDER_SERVICE_ADD' => $order_service_add,
+    'ORDER_VOUCHER' => $order_voucher,
+    'ORDER_NOTE' => $order_note,
+    'MONEY_COLLECTION' => $money_collection,
+    'MONEY_TOTALFEE' => $money_total_fee,
+    'MONEY_FEECOD' => $money_fee_cod,
+    'MONEY_FEEVAS' => $money_fee_vas,
+    'MONEY_FEEINSURANCE' => $money_fee_insurance,
+    'MONEY_FEE' => $money_fee,
+    'MONEY_FEEOTHER' => $money_fee_other,
+    'MONEY_TOTALVAT' => $money_fee_total_vat,
+    'MONEY_TOTAL' => $money_fee_total,
+    'LIST_ITEM' => [[
+        'PRODUCT_NAME' => $product_name,
+        'PRODUCT_QUANTITY' => $product_quantity,
+        'PRODUCT_PRICE' => $product_price,
+        'PRODUCT_WEIGHT' => $product_weight,
+    ]],
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::createBill([
+    'ORDER_NUMBER' => '12',
+    'GROUPADDRESS_ID' => 5818802,
+    'CUS_ID' => 722,
+    'DELIVERY_DATE' => '11/10/2018 15=>09=>52',
+    'SENDER_FULLNAME' => 'Yanme Shop',
+    'SENDER_ADDRESS' => 'Số 5A ngách 22 ngõ 282 Kim Giang, Đại Kim, Quận Hoàng Mai, Hà Nội',
+    'SENDER_PHONE' => '0967.363.789',
+    'SENDER_EMAIL' => 'vanchinh.libra@gmail.com',
+    'SENDER_WARD' => 0,
+    'SENDER_DISTRICT' => 4,
+    'SENDER_PROVINCE' => 1,
+    'SENDER_LATITUDE' => 0,
+    'SENDER_LONGITUDE' => 0,
+    'RECEIVER_FULLNAME' => 'Hoàng - Test',
+    'RECEIVER_ADDRESS' => '1 NKKN P.Nguyễn Thái Bình, Quận 1, TP Hồ Chí Minh',
+    'RECEIVER_PHONE' => '0907882792',
+    'RECEIVER_EMAIL' => 'hoangnh50@fpt.com.vn',
+    'RECEIVER_WARD' => 0,
+    'RECEIVER_DISTRICT' => 43,
+    'RECEIVER_PROVINCE' => 2,
+    'RECEIVER_LATITUDE' => 0,
+    'RECEIVER_LONGITUDE' => 0,
+    'PRODUCT_NAME' => 'Máy xay sinh tố Philips HR2118 2.0L ',
+    'PRODUCT_DESCRIPTION' => 'Máy xay sinh tố Philips HR2118 2.0L ',
+    'PRODUCT_QUANTITY' => 1,
+    'PRODUCT_PRICE' => 2292764,
+    'PRODUCT_WEIGHT' => 40000,
+    'PRODUCT_LENGTH' => 38,
+    'PRODUCT_WIDTH' => 24,
+    'PRODUCT_HEIGHT' => 25,
+    'PRODUCT_TYPE' => 'HH',
+    'ORDER_PAYMENT' => 3,
+    'ORDER_SERVICE' => 'VCN',
+    'ORDER_SERVICE_ADD' => '',
+    'ORDER_VOUCHER' => '',
+    'ORDER_NOTE' => 'cho xem hàng, không cho thử',
+    'MONEY_COLLECTION' => 2292764,
+    'MONEY_TOTALFEE' => 0,
+    'MONEY_FEECOD' => 0,
+    'MONEY_FEEVAS' => 0,
+    'MONEY_FEEINSURRANCE' => 0,
+    'MONEY_FEE' => 0,
+    'MONEY_FEEOTHER' => 0,
+    'MONEY_TOTALVAT' => 0,
+    'MONEY_TOTAL' => 0,
+    'LIST_ITEM' => [[
+        'PRODUCT_NAME' => 'Máy xay sinh tố Philips HR2118 2.0L',
+        'PRODUCT_PRICE' => 2150000,
+        'PRODUCT_WEIGHT' => 2500,
+        'PRODUCT_QUANTITY' => 1,
+    ]],
+]);
+```
+
+**Result**
+
+```php
+```
+
+### #14 [Update bill status](https://partner.viettelpost.vn/?uId=cuoc-va-van-don)
+
+**Syntax**
+
+```php
+\ViettelPost::updateBillStatus([
+    'TYPE' => $type,
+    'ORDER_NUMBER' => $order_number,
+    'NOTE' => $note,
+    'DATE' => $date,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::updateBillStatus([
+    'TYPE' => 4,
+    'ORDER_NUMBER' => '11506020148',
+    'NOTE' => 'Ghi chú',
+]);
+```
+
+**Result**
+
+```php
+```
+
+### #15 [Pricing](https://partner.viettelpost.vn/?uId=cuoc-va-van-don)
+
+**Syntax**
+
+```php
+\ViettelPost::pricing([
+    'PRODUCT_WEIGHT' => $product_weight,
+    'PRODUCT_PRICE' => $product_price,
+    'MONEY_COLLECTION' => $money_collection,
+    'ORDER_SERVICE_ADD' => $order_service_add,
+    'ORDER_SERVICE' => $order_service,
+    'SENDER_PROVINCE' => $sender_province,
+    'SENDER_DISTRICT' => $sender_district,
+    'RECEIVER_PROVINCE' => $receiver_province,
+    'RECEIVER_DISTRICT' => $receiver_district,
+    'PRODUCT_TYPE' => $product_type,
+    'NATIONAL_TYPE' => $national_type,
+    'PRODUCT_WIDTH' => $product_width,
+    'PRODUCT_HEIGHT' => $product_height,
+    'PRODUCT_LENGTH' => $product_length,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::pricing([
+    'PRODUCT_WEIGHT' => 7500,
+    'PRODUCT_PRICE' => 5000,
+    'MONEY_COLLECTION' => 5000,
+    'ORDER_SERVICE_ADD' => '',
+    'ORDER_SERVICE' => 'VCN',
+    'SENDER_PROVINCE' => '1',
+    'SENDER_DISTRICT' => '14',
+    'RECEIVER_PROVINCE' => '2',
+    'RECEIVER_DISTRICT' => '43',
+    'PRODUCT_TYPE' => 'HH',
+    'NATIONAL_TYPE' => 1,
+]);
+```
+
+**Result**
+
+```php
+```
+
+### #16 [Pricing for all matching services](https://partner.viettelpost.vn/?uId=cuoc-va-van-don)
+
+**Syntax**
+
+```php
+\ViettelPost::pricingAllMatchingServices([
+    'SENDER_PROVINCE' => $sender_province,
+    'SENDER_DISTRICT' => $sender_district,
+    'RECEIVER_PROVINCE' => $receiver_province,
+    'RECEIVER_DISTRICT' => $receiver_district,
+    'PRODUCT_TYPE' => $product_type,
+    'PRODUCT_WEIGHT' => $product_weight,
+    'PRODUCT_PRICE' => $product_price,
+    'MONEY_COLLECTION' => $money_collection,
+    'TYPE' => $type,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::pricingAllMatchingServices([
+    'SENDER_PROVINCE' => 2,
+    'SENDER_DISTRICT' => 53,
+    'RECEIVER_PROVINCE' => 39,
+    'RECEIVER_DISTRICT' => 449,
+    'PRODUCT_TYPE' => 'HH',
+    'PRODUCT_WEIGHT' => 500,
+    'PRODUCT_PRICE' => 5000000,
+    'MONEY_COLLECTION' => '5000000',
+    'TYPE' => 1,
+]);
+```
+
+### #17 [Pricing with text address](https://partner.viettelpost.vn/?uId=cuoc-va-van-don)
+
+**Syntax**
+
+```php
+\ViettelPost::pricingWithTextAddress([
+    'PRODUCT_WEIGHT' => $produc_weight,
+    'PRODUCT_PRICE' => $product_price,
+    'MONEY_COLLECTION' => $money_collection,
+    'ORDER_SERVICE_ADD' => $order_service_add,
+    'ORDER_SERVICE' => $order_service,
+    'SENDER_ADDRESS' => $sender_address,
+    'RECEIVER_ADDRESS' => $receiver_address,
+    'PRODUCT_TYPE' => $product_type,
+    'NATIONAL_TYPE' => $national_type,
+    'PRODUCT_WIDTH' => $product_width,
+    'PRODUCT_HEIGHT' => $product_height,
+    'PRODUCT_LENGTH' => $product_length,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::pricingWithTextAddress([
+    'PRODUCT_WEIGHT' => 7500,
+    'PRODUCT_PRICE' => 5000,
+    'MONEY_COLLECTION' => 5000,
+    'ORDER_SERVICE_ADD' => '',
+    'ORDER_SERVICE' => 'VCN',
+    'SENDER_ADDRESS' => 'Đại Mỗ, Nam Từ liêm, Hà Nội',
+    'RECEIVER_ADDRESS' => 'Định Công, Hoàng Mai, Hà Nội',
+    'PRODUCT_TYPE' => 'HH',
+    'NATIONAL_TYPE' => 1,
+]);
+```
+
+**Result**
+
+```php
+```
+
+### #18 [Pricing for all matching services with text address](https://partner.viettelpost.vn/?uId=cuoc-va-van-don)
+
+**Syntax**
+
+```php
+\ViettelPost::pricingAllMatchingServicesWithTextAddress([
+    'SENDER_ADDRESS' => $sender_address,
+    'RECEIVER_ADDRESS' => $receiver_address,
+    'PRODUCT_TYPE' => $product_type,
+    'PRODUCT_PRICE' => $product_price,
+    'MONEY_COLLECTION' => $money_collection,
+    'PRODUCT_WEIGHT' => $product_weight,
+    'PRODUCT_WIDTH' => $product_width,
+    'PRODUCT_HEIGHT' => $product_height,
+    'TYPE' => $type,
+]);
+```
+
+**Example**
+
+```php
+\ViettelPost::pricingAllMatchingServicesWithTextAddress([
+    'SENDER_ADDRESS' => 'Đại Mỗ, Nam Từ liêm, Hà Nội',
+    'RECEIVER_ADDRESS' => 'Định Công, Hoàng Mai, Hà Nội',
+    'PRODUCT_TYPE' => 'HH',
+    'PRODUCT_WEIGHT' => 300,
+    'PRODUCT_PRICE' => 597000,
+    'MONEY_COLLECTION' => '597000',
+    'PRODUCT_LENGTH' => 0,
+    'PRODUCT_WIDTH' => 0,
+    'PRODUCT_HEIGHT' => 0,
+    'TYPE' => 1,
+]);
+```
+
+**Result**
+
+```php
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

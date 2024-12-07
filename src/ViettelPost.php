@@ -8,14 +8,18 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\ViettelPost\ViettelPost\AdministrativeUnit;
+use TriNguyenDuc\ViettelPost\ViettelPost\Extend;
 use TriNguyenDuc\ViettelPost\ViettelPost\PostOfficeAndService;
+use TriNguyenDuc\ViettelPost\ViettelPost\PriceAndBillLading;
 use TriNguyenDuc\ViettelPost\ViettelPost\StoreAddress;
 use TriNguyenDuc\ViettelPost\ViettelPost\Token;
 
 class ViettelPost
 {
     use AdministrativeUnit;
+    use Extend;
     use PostOfficeAndService;
+    use PriceAndBillLading;
     use StoreAddress;
     use Token;
 
@@ -27,7 +31,7 @@ class ViettelPost
             ->withHeaders([
                 'Token' => $token ?: config('viettelpost-laravel.token'),
             ])
-            ->accept('application/json');
+            ->acceptJson();
     }
 
     /**
