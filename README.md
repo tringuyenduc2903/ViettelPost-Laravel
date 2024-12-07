@@ -288,6 +288,33 @@ array:18 [
 ]
 ```
 
+### #10 [Get category store](https://partner.viettelpost.vn/?uId=dia-chi-lay-hang)
+
+**Syntax**
+
+```php
+\ViettelPost::getCategoryStore();
+```
+
+**Result**
+
+```php
+array:1 [
+  0 => array:10 [
+    "groupaddressId" => 16700883
+    "cusId" => 13840789
+    "name" => "Nguyễn Đức Trí"
+    "phone" => "0982213854"
+    "address" => "Số 138 Phố Dương Văn Bé, P.Vĩnh Tuy, Q.Hai Bà Trưng, TP.Hà Nội"
+    "provinceId" => 1
+    "districtId" => 9
+    "wardsId" => 208
+    "postId" => null
+    "merchant" => null
+  ]
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

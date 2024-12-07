@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\ViettelPost\ViettelPost\AdministrativeUnit;
 use TriNguyenDuc\ViettelPost\ViettelPost\PostOfficeAndService;
+use TriNguyenDuc\ViettelPost\ViettelPost\StoreAddress;
 use TriNguyenDuc\ViettelPost\ViettelPost\Token;
 
 class ViettelPost
 {
     use AdministrativeUnit;
     use PostOfficeAndService;
+    use StoreAddress;
     use Token;
 
     protected function getRequest(
